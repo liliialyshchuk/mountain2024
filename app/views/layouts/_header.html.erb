@@ -6,12 +6,24 @@
         </a>
 
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" class="nav-link px-2 text-secondary"><%= t('header.menu.home') %></a></li>
-          <li><a href="#" class="nav-link px-2 text-white"><%= t('header.menu.biking') %></a></li>
-          <li><a href="#" class="nav-link px-2 text-white"><%= t('header.menu.climbing') %></a></li>
-          <li><a href="#" class="nav-link px-2 text-white"><%= t('header.menu.skiing') %></a></li>
-          <li><a href="#" class="nav-link px-2 text-white"><%= t('header.menu.backpacking') %></a></li>
-          <li><a href="#" class="nav-link px-2 text-white"><%= t('header.menu.other') %></a></li>
+          <li>
+            <%= link_to t('header.menu.biking'), biking_path, class: current_link_class(biking_path) %>
+          </li>
+          <li>
+            <%= link_to t('header.menu.climbing'), climbing_path, class: current_link_class(climbing_path) %>
+          </li>
+          <li>
+            <%= link_to t('header.menu.skiing'), skiing_path, class: current_link_class(skiing_path) %>
+          </li>
+          <li>
+            <%= link_to t('header.menu.backpacking'), backpacking_path, class: current_link_class(backpacking_path) %>
+          </li>
+          <li>
+            <%= link_to t('header.menu.other'), other_path, class: current_link_class(other_path) %>
+          </li>
+          <li>
+            <%= link_to t('header.menu.about'), about_path, class: "nav-link px-2 #{current_link_class(about_path)}" %>
+          </li>
         </ul>
 
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
