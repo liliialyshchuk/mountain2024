@@ -27,7 +27,7 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem "sassc-rails"
 
-# auth
+# authorization
 gem 'devise'
 gem 'devise-i18n'
 
