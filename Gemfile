@@ -27,6 +27,10 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem "sassc-rails"
 
+# auth
+gem 'devise'
+gem 'devise-i18n'
+
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
 end
