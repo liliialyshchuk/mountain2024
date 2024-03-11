@@ -30,6 +30,7 @@ gem "sassc-rails"
 # auth
 gem 'devise'
 gem 'devise-i18n'
+gem 'devise-bootstrap-views', '~> 1.0'
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
