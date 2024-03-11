@@ -41,3 +41,8 @@ en:
       backpacking: 'Backpacking'
       other: 'Other'
       about: 'About'
+
+  places:
+    buttons:
+      new: 'New Place'
+

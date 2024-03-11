@@ -31,12 +31,18 @@
         </form>
 
         <%- if user_signed_in? %>
+          <div class ='row'>
+            <div class='col-7 offset-2'>
+              <%= link_to new_place_path do %>
+                <button type="button" class="btn btn-outline-light me-2"><%= t('places.buttons.new') %></button>
+              <% end %>
+            </div> 
+          </div>
           <div class="flex-shrink-0 dropdown">
             <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
               <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
             </a>
             <ul class="dropdown-menu text-small shadow">
-              <li><a class="dropdown-item" href="#">New project...</a></li>
               <li><a class="dropdown-item" href="#">Settings</a></li>
               <li>
                 <%= link_to t('devise.edit_profile'), edit_user_registration_path, class: "dropdown-item" %>
@@ -47,16 +53,20 @@
               </li>
             </ul>
           </div>
+
         <% else %>
           <div class="text-end">
             <%= link_to  new_user_session_path do %>
-              <button type="button" class="btn btn-outline-light me-2">Login</button>
+              <button type="button" class="btn btn-outline-light me-2"><%= t('devise.sessions.new.sign_in') %></button>
             <% end %>
             <%= link_to  new_user_registration_path do %>
-              <button type="button" class="btn btn-warning">Sign-up</button>
+              <button type="button" class="btn btn-warning"><%= t('devise.registrations.new.sign_up') %></button>
             <% end %>
           </div>
         <% end %>
       </div>
+
     </div>
   </header>
+
+
