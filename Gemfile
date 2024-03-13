@@ -32,6 +32,10 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'devise-bootstrap-views', '~> 1.0'
 
+# features
+gem 'image_processing'
+gem 'aws-sdk-s3', require: false
+
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
 end

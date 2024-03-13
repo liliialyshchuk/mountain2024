@@ -12,6 +12,10 @@
   <% end %>
 
   <div>
+    <%= form.label :preview_image, style: "display: block" %>
+    <%= form.file_field :preview_img %>
+  </div>
+  <div>
     <%= form.label :description, style: "display: block" %>
     <%= form.text_field :description %>
   </div>
