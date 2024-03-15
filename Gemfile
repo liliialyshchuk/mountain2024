@@ -26,6 +26,7 @@ gem "bootsnap", require: false
 gem 'bootstrap'
 gem 'jquery-rails'
 gem "sassc-rails"
+gem 'rails-i18n'
 
 # auth
 gem 'devise'
