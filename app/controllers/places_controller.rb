@@ -41,6 +41,8 @@ class PlacesController < ApplicationController
 
   # PATCH/PUT /places/1 or /places/1.json
   def update
+    authorize! :edit, @place
+
     respond_to do |format|
       if @place.update(place_params)
         format.html { redirect_to place_url(@place), notice: "Place was successfully updated." }

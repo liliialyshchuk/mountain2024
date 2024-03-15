@@ -1,2 +1,15 @@
 @import "bootstrap";
  
+footer {
+    position: fixed;
+    bottom: 0;
+    min-width:100%;
+    max-width:100%;
+  }
+
+  .borderblock { 
+    border: solid;
+    border-color: black;
+    writing-mode: horizontal-tb;
+    text-align: justify;
+  }
