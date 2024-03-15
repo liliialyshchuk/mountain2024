@@ -1,8 +1,11 @@
 <%= render @place %>
 
 <div>
-  <%= link_to "Edit this place", edit_place_path(@place) %> |
-  <%= link_to "Back to places", places_path %>
-
-  <%= button_to "Destroy this place", @place, method: :delete %>
+  <% if can? :edit, @place %>
+    <%= button_to "Edit this place", edit_place_path(@place), form_class: 'd-inline' %> |
+    <%= button_to "Back to places", places_path, form_class: 'd-inline' %>
+  <% end %>
+  <% if can? :destroy, @place %>
+    <%= button_to "Destroy this place", @place, method: :delete, form_class: 'd-inline' %>
+  <% end %>
 </div>

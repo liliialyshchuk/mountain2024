@@ -3,25 +3,30 @@ class PlacesController < ApplicationController
 
   # GET /places or /places.json
   def index
-    @places = Place.all
+    @places = Place.accessible_by(current_ability)
   end
 
   # GET /places/1 or /places/1.json
   def show
+    authorize! :read, @place
   end
 
   # GET /places/new
   def new
     @place = Place.new
+    authorize! :create, @place
   end
 
   # GET /places/1/edit
   def edit
+    authorize! :edit, @place
   end
 
   # POST /places or /places.json
   def create
     @place = Place.new(place_params)
+    @place = current_user.places.build(place_params)
+    authorize! :create, @place
 
     respond_to do |format|
       if @place.save
@@ -49,6 +54,8 @@ class PlacesController < ApplicationController
 
   # DELETE /places/1 or /places/1.json
   def destroy
+    authorize! :destroy, @place
+
     @place.destroy!
 
     respond_to do |format|

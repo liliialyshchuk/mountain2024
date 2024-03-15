@@ -13,8 +13,10 @@
           <%= link_to place do%>
             <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
           <% end %>
-          <%= link_to edit_place_path(place) do%>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+          <% if can? :edit, @place %>
+            <%= link_to edit_place_path(place) do%>
+              <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+            <% end %>
           <% end %>
         </div>
         <small class="text-body-secondary">9 mins</small>
