@@ -5,5 +5,7 @@
 <br>
 
 <div>
-  <%= link_to "Back to places", places_path %>
+  <%= link_to places_path do %>
+    <button type="button" class="btn btn-dark"><%= t('places.buttons.back') %></button>
+  <% end %>
 </div>

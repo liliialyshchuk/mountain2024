@@ -45,4 +45,8 @@ en:
   places:
     buttons:
       new: 'New Place'
+      view: 'Show this Place'
+      back: 'Back to Places'
+      edit: 'Edit this Place'
+      delete: 'Delete this place'
 
