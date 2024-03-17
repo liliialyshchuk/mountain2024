@@ -28,14 +28,25 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/blob/develop/docs/define_check_abilities.md
+
     can :read, Place
     cannot :read, Place, published_at: nil
 
     return unless user.present?
 
     can :create, Place
-    can :read, Place, author_id: user.id
+    can :read, Place, author_id: user.id 
     can :edit, Place, author_id: user.id, published_at: nil
     can :destroy, Place, author_id: user.id, published_at: nil
   end
 end
+
+    # can :read, Place
+    # cannot :read, Place, published_at: nil
+
+    # return unless user.present?
+
+    # can :create, Place
+    # can :read, Place, author_id: user.id
+    # can :edit, Place, author_id: user.id, published_at: nil
+    # can :destroy, Place, author_id: user.id, published_at: nil

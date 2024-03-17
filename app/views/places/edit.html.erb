@@ -17,5 +17,7 @@
     <button type="button" class="btn btn-dark"><%= t('places.buttons.view') %></button>
   <% end %>
 
+  <%= button_to t('places.buttons.delete'), @place, method: :delete, form_class: 'd-inline', class: 'btn btn-danger' %>
+
 </div>
 

@@ -9,7 +9,6 @@
       <button type="button" class="btn btn-dark"><%= t('places.buttons.back') %></button>
     <% end %>
   <% end %>
-
   <% if can? :destroy, @place %>
     <%= button_to t('places.buttons.delete'), @place, method: :delete, form_class: 'd-inline', class: 'btn btn-danger' %>
   <% end %>
