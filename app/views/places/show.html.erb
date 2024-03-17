@@ -1,15 +1,14 @@
-<%= render @place %>
 
 <div class="text-center">
-  <% if can? :edit, @place %>
-    <%= link_to edit_place_path(@place) do %>
-      <button type="button" class="btn btn-dark"><%= t('places.buttons.edit') %></button>
-    <% end %>
-    <%= link_to places_path do %>
-      <button type="button" class="btn btn-dark"><%= t('places.buttons.back') %></button>
-    <% end %>
-  <% end %>
-  <% if can? :destroy, @place %>
-    <%= button_to t('places.buttons.delete'), @place, method: :delete, form_class: 'd-inline', class: 'btn btn-danger' %>
-  <% end %>
+  <h1>Viewing place</h1>
 </div>
+
+<div class="text-center">
+  <%= link_to places_path do %>
+    <button type="button" class="btn btn-dark"><%= t('places.buttons.back') %></button>
+  <% end %>
+  <%= button_to t('places.buttons.delete'), @place, method: :delete, form_class: 'd-inline', class: 'btn btn-danger' %>
+</div> 
+
+<br>
+<%= render @place %>

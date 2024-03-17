@@ -36,8 +36,8 @@ class Ability
 
     can :create, Place
     can :read, Place, author_id: user.id 
-    can :edit, Place, author_id: user.id, published_at: nil
-    can :destroy, Place, author_id: user.id, published_at: nil
+    can :edit, Place, author_id: user.id
+    can :destroy, Place, author_id: user.id
   end
 end
 
