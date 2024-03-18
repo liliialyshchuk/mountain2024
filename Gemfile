@@ -37,6 +37,7 @@ gem 'devise-bootstrap-views', '~> 1.0'
 gem 'image_processing'
 gem 'aws-sdk-s3', require: false
 gem 'cancancan'
+gem 'activeadmin'
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ]

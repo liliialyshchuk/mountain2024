@@ -54,4 +54,5 @@ class CreateActiveStorageTables < ActiveRecord::Migration[7.0]
       foreign_key_type = setting || :bigint
       [primary_key_type, foreign_key_type]
     end
+    
 end
