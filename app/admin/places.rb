@@ -14,5 +14,5 @@ ActiveAdmin.register Place do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-  
+  remove_filter :preview_img_attachment, :preview_img_blob
 end
