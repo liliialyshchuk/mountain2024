@@ -12,6 +12,7 @@ footer {
     border-color: black;
     writing-mode: horizontal-tb;
     text-align: justify;
+    background-color: #abd4e7;
   }
 
   .body {
@@ -27,9 +28,22 @@ footer {
     flex: 1 0 auto;
   }
 
+  body {
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/726/859/736/just-sky-blue-blur-wallpaper-preview.jpg");
+    background-size: cover;
+  }
+
+
   #photo_place {
     margin: auto;
     max-height: auto;
     max-width: 1000px
   }
+
+  #textabout {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+
  
