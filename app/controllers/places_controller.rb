@@ -8,7 +8,6 @@ class PlacesController < ApplicationController
 
   # GET /places/1 or /places/1.json
   def show
-    authorize! :read, @place
   end
 
   # GET /places/new
