@@ -3,12 +3,19 @@
   <h1>Viewing place</h1>
 </div>
 
-<div class="text-center">
+<div id="photo_place" class="text-center" >
   <%= link_to places_path do %>
     <button type="button" class="btn btn-dark"><%= t('places.buttons.back') %></button>
   <% end %>
   <%= button_to t('places.buttons.delete'), @place, method: :delete, form_class: 'd-inline', class: 'btn btn-danger' %>
+
+  <br>
+  <br>
+
+  <%= render @place %>
 </div> 
 
-<br>
-<%= render @place %>
+
+
+
+
