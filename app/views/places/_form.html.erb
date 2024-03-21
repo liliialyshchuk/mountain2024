@@ -16,13 +16,22 @@
       <%= form.label :preview_image, style: "display: block" %>
       <%= form.file_field :preview_img %>
     </div>
+  </div>
+  
+   <br> 
+   
+  <div class="borderblock col-4 offset-4">
     <div>
       <%= form.label :description, style: "display: block" %>
       <%= form.text_field :description %>
-    </div>
-
-    <div>
-      <%= form.submit %>
+       <br> 
     </div>
   </div>
+
+  <br> 
+  
+  <div class="text-center" >
+    <button type="button"class="btn btn-success"  ><%= form.submit %></button>
+  </div>
+
 <% end %>

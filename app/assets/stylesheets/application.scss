@@ -9,10 +9,11 @@ footer {
 
   .borderblock { 
     border: solid;
-    border-color: black;
+    border-color: rgb(3, 81, 100);
     writing-mode: horizontal-tb;
-    text-align: justify;
+    text-align: center;
     background-color: #abd4e7;
+    
   }
 
   .body {
@@ -47,9 +48,7 @@ footer {
   }
 
   #photoflexbox {
-    flex-basis: 33%;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-bottom: 150px;
   }
 
 
