@@ -25,12 +25,16 @@
         <%= f.password_field :password_confirmation, autocomplete: 'current-password', class: 'form-control' %>
       </div>
 
+      <br>
+
       <div class="form-group">
-        <%= f.submit t('.sign_up'), class: 'btn btn-primary' %>
+        <%= f.submit t('.sign_up'), class: 'btn btn-dark' %>
+
+        <%= link_to  new_user_session_path do %>
+          <button type="button" class="btn btn-dark"><%= t('devise.sessions.new.sign_in') %></button>
+        <% end %>
       </div>
     <% end %>
-
-    <%= render 'devise/shared/links' %>
 
   </div>
 </div>

@@ -50,10 +50,10 @@
         <% else %>
           <div class="text-end">
             <%= link_to  new_user_session_path do %>
-              <button type="button" class="btn btn-outline-light me-2"><%= t('devise.sessions.new.sign_in') %></button>
+              <button type="button" class="btn btn-light"><%= t('devise.sessions.new.sign_in') %></button>
             <% end %>
             <%= link_to  new_user_registration_path do %>
-              <button type="button" class="btn btn-warning"><%= t('devise.registrations.new.sign_up') %></button>
+              <button type="button" class="btn btn-outline-light me-2"><%= t('devise.registrations.new.sign_up') %></button>
             <% end %>
           </div>
         <% end %>
