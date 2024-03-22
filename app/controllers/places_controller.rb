@@ -2,11 +2,12 @@ class PlacesController < ApplicationController
   before_action :set_place, only: %i[ show edit update destroy ]
 
   def index
-    @places = Place.accessible_by(current_ability)
+    @places = Place.all
+    
   end
 
   def show
-    authorize! :read, @place
+    
   end
 
   def new
@@ -19,7 +20,6 @@ class PlacesController < ApplicationController
   end
 
   def create
-    @place = Place.new(place_params)
     @place = current_user.places.build(place_params)
     authorize! :create, @place
 
