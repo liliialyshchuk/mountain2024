@@ -1,28 +1,23 @@
 class PlacesController < ApplicationController
   before_action :set_place, only: %i[ show edit update destroy ]
 
-  # GET /places or /places.json
   def index
-    @places = Place.all
+    @places = Place.accessible_by(current_ability)
   end
 
-  # GET /places/1 or /places/1.json
   def show
     authorize! :read, @place
   end
 
-  # GET /places/new
   def new
     @place = Place.new
     authorize! :create, @place
   end
 
-  # GET /places/1/edit
   def edit
     authorize! :edit, @place
   end
 
-  # POST /places or /places.json
   def create
     @place = Place.new(place_params)
     @place = current_user.places.build(place_params)
@@ -39,7 +34,6 @@ class PlacesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /places/1 or /places/1.json
   def update
     authorize! :edit, @place
 
@@ -54,7 +48,6 @@ class PlacesController < ApplicationController
     end
   end
 
-  # DELETE /places/1 or /places/1.json
   def destroy
     authorize! :destroy, @place
 
@@ -67,12 +60,10 @@ class PlacesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_place
       @place = Place.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
     def place_params
       params.require(:place).permit(:description, :preview_img)
     end

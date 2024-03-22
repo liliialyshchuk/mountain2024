@@ -1,18 +1,18 @@
 @import "bootstrap";
  
 footer {
-    position: fixed;
     bottom: 0;
     min-width:100%;
     max-width:100%;
+    position: fixed;
   }
 
   .borderblock { 
     border: solid;
-    border-color: rgb(3, 81, 100);
-    writing-mode: horizontal-tb;
-    text-align: center;
-    background-color: #abd4e7;
+    // border-color: rgb(3, 81, 100);
+    // writing-mode: horizontal-tb;
+    // text-align: center;
+    // background-color: #abd4e7;
     
   }
 
@@ -30,8 +30,7 @@ footer {
   }
 
   body {
-    background-image: url("https://c4.wallpaperflare.com/wallpaper/726/859/736/just-sky-blue-blur-wallpaper-preview.jpg");
-    background-size: cover;
+    background-color:rgb(209, 213, 214);
   }
 
 

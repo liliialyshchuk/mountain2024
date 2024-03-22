@@ -11,27 +11,34 @@
     </div>
   <% end %>
 
-  <div class="borderblock col-4 offset-4">
-    <div>
-      <%= form.label :preview_image, style: "display: block" %>
+<div class="borderblock container row col-4 offset-4"> 
+  <div class="text-center">
+    <br>
+    <div class="offset-2">
+      <%= form.label :preview_image, style: "display: none" %>
       <%= form.file_field :preview_img %>
     </div>
-  </div>
   
-   <br> 
+    <br> 
    
-  <div class="borderblock col-4 offset-4">
-    <div>
-      <%= form.label :description, style: "display: block" %>
+    <div class="text-center"> 
+      <%= form.label :description, style: "display: block"%>
       <%= form.text_field :description %>
-       <br> 
     </div>
-  </div>
-
-  <br> 
+    <br> 
   
-  <div class="text-center" >
-    <button type="button"class="btn btn-success"  ><%= form.submit %></button>
+
+
+    <div class="form-group text-center">
+      <%= link_to form.submit,  class: 'btn btn-dark' %>
+    </div>
+
+
+    <br> 
   </div>
+</div>
+
+
 
 <% end %>
+
